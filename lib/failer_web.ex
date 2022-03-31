@@ -69,6 +69,9 @@ defmodule FailerWeb do
         Logger.warn("#{session_id} crashed LiveView because: #{inspect(reason)}")
         FailerWeb.LiveViewCrashLoopLog.crash(session_id)
       end
+
+      @impl true
+      def terminate(reason, _state), do: :ok
     end
   end
 
