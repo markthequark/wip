@@ -1,6 +1,11 @@
 /* This file is for your main application CSS */
 @import "./phoenix.css";
 
+html {
+  filter: invert(.97) hue-rotate(180deg);
+  background: black;
+}
+
 /* Alerts and form errors used by phx.new */
 .alert {
   padding: 15px;
