@@ -2,10 +2,7 @@ import Config
 
 # Configure your database
 config :failer, Failer.Repo,
-  username: "phoenix",
-  password: "phoenix",
-  hostname: "localhost",
-  database: "failer_dev",
+  url: System.get_env("DATABASE_URL") || "postgres://localhost/failer_dev",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
